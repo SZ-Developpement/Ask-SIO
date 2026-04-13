@@ -30,7 +30,7 @@ dev           ← INTÉGRATION — code testé, prêt à merger dans main
 └── docs/...  ← Documentation
 ```
 
-### Règles absolues 🚨
+### Règles absolues
 
 | Règle                            | Détail                                 |
 | -------------------------------- | -------------------------------------- |
@@ -125,14 +125,14 @@ git push origin feat/ma-feature
 ### Python (Backend)
 
 ```python
-# ✅ Toujours typer avec les annotations Python
+# Toujours typer avec les annotations Python
 from pydantic import BaseModel
 
 class ChatRequest(BaseModel):
     question: str
     session_id: str
 
-# ✅ Une route = un fichier router
+# Une route = un fichier router
 # routers/chat.py
 from fastapi import APIRouter
 router = APIRouter(prefix="/api/chat", tags=["chat"])
@@ -141,23 +141,23 @@ router = APIRouter(prefix="/api/chat", tags=["chat"])
 async def chat(request: ChatRequest) -> ChatResponse:
     ...
 
-# ✅ Variables d'environnement via pydantic-settings
+# Variables d'environnement via pydantic-settings
 # Jamais de clé API en dur dans le code
 ```
 
 ### TypeScript/React (Frontend)
 
 ```tsx
-// ✅ Composants en PascalCase
+// Composants en PascalCase
 // MatiereCard.tsx, ChatWindow.tsx
 
-// ✅ Services Axios séparés des composants
+// Services Axios séparés des composants
 // services/api.js
 import axios from "axios";
 const api = axios.create({ baseURL: import.meta.env.VITE_API_URL });
 export const sendMessage = (question) => api.post("/api/chat", { question });
 
-// ✅ Jamais d'appel API directement dans un composant
+// Jamais d'appel API directement dans un composant
 ```
 
 ### Nommage
