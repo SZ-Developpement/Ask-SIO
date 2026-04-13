@@ -1,0 +1,52 @@
+# ─────────────────────────────────────
+# Python / Backend
+# ─────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.env
+.env.local
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ChromaDB — base vectorielle locale
+chroma_db/
+chroma_db_test/
+
+# ─────────────────────────────────────
+# Node / Frontend
+# ─────────────────────────────────────
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+*.tsbuildinfo
+
+# ─────────────────────────────────────
+# OS
+# ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─────────────────────────────────────
+# IDE
+# ─────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─────────────────────────────────────
+# Docker
+# ─────────────────────────────────────
+*.log
